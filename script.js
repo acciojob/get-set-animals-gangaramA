@@ -1,36 +1,34 @@
 // Define the Animal class
 class Animal {
-    constructor(name, species) {
-        this.name = name;
+    constructor(species) {
         this.species = species;
     }
 
-    sound() {
-        console.log(`${this.name} makes a sound.`);
+    makeSound() {
+        console.log(`The ${this.species} makes a sound`);
     }
 }
 
 // Define the Dog class inheriting from Animal
 class Dog extends Animal {
-    constructor(name, breed) {
-        super(name, 'Dog');
+    constructor(breed) {
+        super('Dog');
         this.breed = breed;
     }
 
     bark() {
-        console.log(`${this.name}, the ${this.breed}, barks loudly!`);
+        console.log('woof');
     }
 }
 
 // Define the Cat class inheriting from Animal
 class Cat extends Animal {
-    constructor(name, color) {
-        super(name, 'Cat');
-        this.color = color;
+    constructor(species) {
+        super(species);
     }
 
-    meow() {
-        console.log(`${this.name}, the ${this.color} cat, meows softly.`);
+    purr() {
+        console.log('purr');
     }
 }
 
